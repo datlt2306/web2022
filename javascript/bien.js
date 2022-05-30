@@ -22,3 +22,26 @@ function sum(a, b) {
 
 // 2
 console.log(sum(a, b));
+
+const myName = "Dat";
+const myAge = 20;
+const isStatus = true;
+
+const myChildren = ["Kien", "Lam"];
+const running = function () {};
+
+const myInfo = {
+    name: "Dat",
+    age: 20,
+    isStatus: true,
+    street: {
+        name: "Ha Noi",
+        address: "Yen Hoa",
+    },
+    running: function () {
+        return "object running";
+    },
+};
+
+console.log(running());
+console.log(myInfo.running());
