@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        Detail product
+
+        <script>
+            const productList = [
+                { id: 1, name: "product A", price: 200 }, // item
+                { id: 2, name: "product B", price: 300 }, // item
+            ];
+
+            // lấy được id trên url
+            const id = new URLSearchParams(window.location.search).get("id");
+
+            // Tim trong mang, neu co id nao trung voi id trong mang thi tra ve ket qua
+            const product = productList.find((item) => item.id == id);
+        </script>
+    </body>
+</html>

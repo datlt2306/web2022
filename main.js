@@ -12,7 +12,7 @@ function showProducts(products) {
     // xử lý
     let result = "";
     for (let i = 0; i < products.length; i++) {
-        result += `<h2>${products[i].name}</h2>`;
+        result += `<h2><a href="./detail.html?id=${products[i].id}">${products[i].name}</a></h2>`;
     }
     // return
     return result;
