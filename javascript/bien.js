@@ -6,42 +6,45 @@
 // tên hàm nó phải hành động
 // - sum, showProducts, removeProduct
 
-// 1
+// 1 tên biến - Danh từ
 const a = 10;
 const b = 20;
 
 // 3
+// tên hàm - Động từ: showProduct, removeProduct, checkEvenOrOddNumber()
 function sum(a, b) {
-    // kiểm tra
+    // kiem tra
     if (typeof a !== "number" || typeof b !== "number") return -1;
-    // xử lý
+    // xu ly
     const result = a + b;
-    // kết quả
+    // return
     return result;
 }
+console.log(sum(10, 20));
 
-// 2
-console.log(sum(a, b));
+// vi du 2:
 
-const myName = "Dat";
-const myAge = 20;
-const isStatus = true;
+const productList = [
+    { id: 1, name: "Product A", price: 20 },
+    { id: 2, name: "Product B", price: 30 },
+];
 
-const myChildren = ["Kien", "Lam"];
-const running = function () {};
+function showProducts(products) {
+    // kiểm tra
+    if (!Array.isArray(productList) || productList.length == 0) return [];
 
-const myInfo = {
-    name: "Dat",
-    age: 20,
-    isStatus: true,
-    street: {
-        name: "Ha Noi",
-        address: "Yen Hoa",
-    },
-    running: function () {
-        return "object running";
-    },
-};
+    // xử lý
+    let result = "";
+    for (let i = 0; i < products.length; i++) {
+        result += `<h2>${products[i]}</h2>`;
+    }
+    // return
+    return result;
+}
+function render(element) {
+    if (element) {
+        document.querySelector("#app").innerHTML = element;
+    }
+}
 
-console.log(running());
-console.log(myInfo.running());
+render(showProducts(productList));
