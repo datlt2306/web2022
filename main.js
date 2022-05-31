@@ -1,10 +1,12 @@
+// Khai báo mảng
 const productList = [
     { id: 1, name: "product A", price: 200 },
     { id: 2, name: "product B", price: 300 },
 ];
-
+// selector đến element product
 const productElement = document.querySelector("#product");
 
+// khai báo hàm show product
 function showProducts(products) {
     // kiểm tra
     if (!Array.isArray(productList) || productList.length == 0) return [];
@@ -17,11 +19,12 @@ function showProducts(products) {
     // return
     return result;
 }
+
+// Hiển thị ra ngoài màn hình
 function render(element, content) {
-    console.log(content);
+    // nếu tìm được element thì hiển thị
     if (element) {
         element.innerHTML = content;
     }
 }
 render(productElement, showProducts(productList));
-// render(vi tri, noi dung);
