@@ -1,6 +1,6 @@
 const productList = [
-    { id: 1, name: "Đat" },
-    { id: 2, name: "Kiên" },
+    { id: 1, name: "Product A", img: "", time: 30, type: "snack" },
+    { id: 1, name: "Product B", img: "", time: 60, type: "fish" },
 ];
 const categories = [
     { id: 1, name: "Category 1" },
@@ -15,11 +15,11 @@ function showData(data, key) {
     let result = "";
     if (key == "product") {
         for (let i = 0; i < data.length; i++) {
-            result += `<h2>${data[i].name}</h2>`;
+            result += `<h2><a href="./detail.html?id=${data[i].id}">${data[i].name}</a></h2>`;
         }
     } else {
         for (let i = 0; i < data.length; i++) {
-            result += `<div><h2>${data[i].name}</h2></div>`;
+            result += `<div><h2><a href="./product.html?id=${data[i].id}">${data[i].name}</a></h2></div>`;
         }
     }
     // trả về kết quả
