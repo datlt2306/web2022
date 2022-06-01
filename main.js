@@ -2,6 +2,7 @@ const products = [
     { id: 1, name: "Product A", img: "https://picsum.photos/400/400" },
     { id: 2, name: "Product B", img: "https://picsum.photos/400/400" },
 ];
+
 function listProduct(products) {
     if (!Array.isArray(products) || products.length == 0) return false;
 
