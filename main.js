@@ -3,9 +3,7 @@ const products = [
     { id: 2, name: "Product B", img: "https://picsum.photos/400/400" },
 ];
 function listProduct(products) {
-    // check
     if (!Array.isArray(products) || products.length == 0) return false;
-    // processing
 
     let result = "";
     for (let i = 0; i < products.length; i++) {
@@ -17,7 +15,6 @@ function listProduct(products) {
                 </div>
         `;
     }
-    // return
     return result;
 }
 
