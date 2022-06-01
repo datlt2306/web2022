@@ -27,10 +27,15 @@ function listProduct(products) {
     // return
     return result;
 }
-const app = document.getElementById("app");
-if (app) {
-    app.innerHTML = listProduct(products);
+
+function render(elementId, content) {
+    const element = document.getElementById(elementId);
+    if (element) {
+        element.innerHTML = content;
+    }
 }
+render("total", sum(a, b));
+render("products", listProduct(products));
 
 // loop
 // for, for...in, for...of, forEarch, map
