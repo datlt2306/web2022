@@ -1,11 +1,5 @@
-const productList = [
-    { id: 1, name: "Product A", img: "", time: 30, type: "snack" },
-    { id: 1, name: "Product B", img: "", time: 60, type: "fish" },
-];
-const categories = [
-    { id: 1, name: "Category 1" },
-    { id: 2, name: "Category 2" },
-];
+import { render } from "./common";
+import { categories, productList } from "./data";
 
 function showData(data, key) {
     // kiểm tra
@@ -26,8 +20,5 @@ function showData(data, key) {
     return result;
 }
 
-function render(idElement, content) {
-    document.getElementById(idElement).innerHTML = content;
-}
 render("product", showData(productList, "product"));
 render("category", showData(categories, "category"));
