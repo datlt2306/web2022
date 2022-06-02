@@ -7,19 +7,16 @@
         <title>Document</title>
     </head>
     <body>
-        Detail product
+        <div class="detail-product">
+            <div class="mx-auto max-w-7xl">
+                <div class="grid grid-cols-2 gap-8" id="product-detail"></div>
+            </div>
+        </div>
+        <section class="related">
+            <div class="container"></div>
+        </section>
 
-        <script>
-            const productList = [
-                { id: 1, name: "product A", price: 200 }, // item
-                { id: 2, name: "product B", price: 300 }, // item
-            ];
-
-            // lấy được id trên url
-            const id = new URLSearchParams(window.location.search).get("id");
-
-            // Tim trong mang, neu co id nao trung voi id trong mang thi tra ve ket qua
-            const product = productList.find((item) => item.id == id);
-        </script>
+        <!-- <div id="detail-page"></div> -->
+        <script type="module" src="./src/js/detail.js"></script>
     </body>
 </html>
