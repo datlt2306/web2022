@@ -12,13 +12,12 @@ function listProduct(products) {
         result += `
                 <div>
                     <img src="${product.img}" alt="" />
-                    <h3><a href="">${product.name}</a></h3>
+                    <h3><a href="./detail.html?id=${product.id}">${product.name}</a></h3>
                 </div>
         `;
     }
     return result;
 }
-
 function render(elementId, content) {
     const element = document.getElementById(elementId);
     if (element) {
