@@ -5,17 +5,24 @@
         <link rel="icon" type="image/svg+xml" href="favicon.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Vite App</title>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
-        <div>
-            <section>
-                <div id="product"></div>
-            </section>
-            <section>
-                <div id="category"></div>
-            </section>
-        </div>
-        <div id="app"></div>
-        <script type="module" src="./src/js/main.js"></script>
+        <ul id="main-menu" class="hidden md:flex justify-end space-x-8">
+            <li><a href="">Home </a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Product</a></li>
+        </ul>
+        <button id="button" class="inline-block md:hidden">Mobile</button>
+        <!-- <div id="app"></div> -->
+        <!-- <script type="module" src="./src/js/main.js"></script> -->
+        <script>
+            const button = document.getElementById("button");
+            const menu = document.getElementById("main-menu");
+
+            button.addEventListener("click", function () {
+                menu.classList.toggle("hidden");
+            });
+        </script>
     </body>
 </html>
