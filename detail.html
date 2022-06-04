@@ -7,8 +7,28 @@
         <title>Document</title>
     </head>
     <body>
-        <h1>Detail Page</h1>
-        <div id="detail"></div>
-        <script type="module" src="./src/js/detail.js"></script>
+        <header>
+            <ul class="menu-desktop hidden md:block">
+                <li><a href="#"></a></li>
+            </ul>
+            <button id="btn-mobile">=</button>
+            <ul id="menu-mobile" class="hidden">
+                <li><a href="#">menu</a></li>
+            </ul>
+        </header>
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+        <script>
+            const btn = document.getElementById("btn-mobile");
+            btn.addEventListener("click", function () {
+                console.log("1");
+                document
+                    .querySelector("#menu-mobile")
+                    .classList.toggle("hidden");
+            });
+        </script>
     </body>
 </html>
