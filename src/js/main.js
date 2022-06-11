@@ -7,14 +7,8 @@ function showData(data, key) {
 
     // xử lý
     let result = "";
-    if (key == "product") {
-        for (let i = 0; i < data.length; i++) {
-            result += `<h2><a href="./detail.html?id=${data[i].id}">${data[i].name}</a></h2>`;
-        }
-    } else {
-        for (let i = 0; i < data.length; i++) {
-            result += `<div><h2><a href="./product.html?id=${data[i].id}">${data[i].name}</a></h2></div>`;
-        }
+    for (let i = 0; i < data.length; i++) {
+        result += `<div><h2><a href="./detail.html?id=${data[i].id}">${data[i].name}</a></h2></div>`;
     }
     // trả về kết quả
     return result;
