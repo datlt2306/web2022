@@ -19,6 +19,6 @@ function showData(data, key) {
     // trả về kết quả
     return result;
 }
-
-render("product", showData(productList, "product"));
-render("category", showData(categories, "category"));
+// render(vitri, noidung);
+render("abc", "Hello world");
+render("product", showData(productList));

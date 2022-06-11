@@ -1,5 +1,6 @@
-export function render(idElement, content) {
-    if (idElement) {
-        document.getElementById(idElement).innerHTML = content;
-    }
+export function render(element, content) {
+    const idElement = document.getElementById(element);
+    if (!idElement) return;
+
+    idElement.innerHTML = content;
 }
