@@ -1,0 +1,33 @@
+.row {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+}
+.col {
+    background: #000;
+}
+/* 
+    576 -> Mobile
+    768 -> Tablet
+    1024 -> Laptop
+    1280 -> desktop
+    1536 -> large desktop
+*/
+/* Yêu cầu: mobile 1 cột, tablet 2 cột, laptop 4 cột */
+@media (min-width: 576px) {
+}
+/* Tablet */
+@media (min-width: 768px) {
+    .row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .row {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (min-width: 1280px) {
+}
+@media (min-width: 1536px) {
+}
